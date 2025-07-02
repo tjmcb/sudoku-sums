@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Sudoku Website</title>
+    <style>
+div {
+    text-align: center;
+}
+.flex, .criteria {
+    display: flex;
+}
+.results, .criteria, .with, .without {
+    flex: 1
+} 
+.eliminated {
+    color: red
+}
+.with {
+    background-color: lightgreen;
+}
+.without {
+    background-color: lightcoral;
+}
+    </style>
+</head>
+<body>
+    <div id="search">
+        <form>
+            <h3>Search</h3>
+            Sum: <input type="number" placeholder="5"/>
+            Size: <input type="number" placeholder="2"/>
+        </form>
+    </div>
+    <div id="flex" class="flex">
+        <div id="results" class="results">
+            <h3>Options</h3>
+            <p>14</p>
+            <p class="eliminated">23</p>
+        </div>
+        <div id="criteria" class="criteria">
+            <div class="with" class="with">
+                <h3>With</h3>
+                <p>1<input type="checkbox"/></p>
+                <p>2<input type="checkbox"/></p>
+                <p>3<input type="checkbox"/></p>
+                <p>4<input type="checkbox"/></p>
+                <p>5<input type="checkbox"/></p>
+                <p>6<input type="checkbox"/></p>
+                <p>7<input type="checkbox"/></p>
+                <p>8<input type="checkbox"/></p>
+                <p>9<input type="checkbox"/></p>
+            </div>
+            <div class="without" class="without">
+                <h3>Without</h3>
+                <p>1<input type="checkbox"/></p>
+                <p>2<input type="checkbox"/></p>
+                <p>3<input type="checkbox"/></p>
+                <p>4<input type="checkbox"/></p>
+                <p>5<input type="checkbox"/></p>
+                <p>6<input type="checkbox"/></p>
+                <p>7<input type="checkbox"/></p>
+                <p>8<input type="checkbox"/></p>
+                <p>9<input type="checkbox"/></p>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+console.log("hello world")
+</script>
+</html>

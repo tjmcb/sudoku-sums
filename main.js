@@ -1,10 +1,15 @@
 import SUMS from './sums.json' with {type: 'json'}
 
-const selection = {}
+const selection = {};
 
-selection.sum = 5
-selection.digits = 2
-selection.results = SUMS[2][5];
+selection.sum = 5;
+selection.digits = 2;
+selection.results = SUMS[selection.digits][selection.sum];
+
+selection.with = [];
+selection.without = [2];
+selection.show = [];
+selection.eliminated = [];
 
 function makeResults(){
     const newDiv = document.createElement("div");
@@ -41,4 +46,19 @@ document.getElementById("search-form").onsubmit = (event) => {
     }
 }
 
+function filter(string){
+    // with certain digit, fails if does not include
+    for (const i in selection.with){
+        if (!string.includes(selection.with[i])){ return false }
+    }
+    // without certain digit, fails if includes
+    for (const i in selection.without){
+        if (string.includes(selection.without[i])){ return false }
+    }
+    return true;
+}
+
 makeResults();
+selection.results.map((result) => {
+    console.log(filter(result))
+})

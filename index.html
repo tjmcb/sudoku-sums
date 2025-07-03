@@ -25,10 +25,12 @@ div {
 </head>
 <body>
     <div id="search">
-        <form>
-            <h3>Search</h3>
-            Sum: <input type="number" placeholder="5"/>
-            Size: <input type="number" placeholder="2"/>
+        <form id="search-form">
+            <h2>Search</h3>
+            Sum: <input type="number" name="sum" placeholder="5"/>
+            Digits: <input type="number" name="digits" placeholder="2"/>
+            <!---Why is the submit button needed for onsubmit to work?--->
+            <input type="submit">
         </form>
     </div>
     <div id="flex" class="flex">
@@ -65,7 +67,5 @@ div {
         </div>
     </div>
 </body>
-<script>
-console.log("hello world")
-</script>
+<script type="module" src="./main.js"></script>
 </html>

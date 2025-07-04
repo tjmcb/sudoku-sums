@@ -6,7 +6,7 @@
 div {
     text-align: center;
 }
-.flex, .criteria {
+.flex, .checkboxes {
     display: flex;
 }
 .results, .criteria, .with, .without {
@@ -23,6 +23,9 @@ div {
 }
 .results p {
     font-size: 1.5rem;
+}
+h3::first-letter {
+    text-transform: capitalize;
 }
     </style>
 </head>
@@ -43,30 +46,8 @@ div {
             <p class="eliminated">23</p>
         </div>
         <div id="criteria" class="criteria">
-            <div class="with" class="with">
-                <h3>With</h3>
-                <p>1<input type="checkbox"/></p>
-                <p>2<input type="checkbox"/></p>
-                <p>3<input type="checkbox"/></p>
-                <p>4<input type="checkbox"/></p>
-                <p>5<input type="checkbox"/></p>
-                <p>6<input type="checkbox"/></p>
-                <p>7<input type="checkbox"/></p>
-                <p>8<input type="checkbox"/></p>
-                <p>9<input type="checkbox"/></p>
-            </div>
-            <div class="without" class="without">
-                <h3>Without</h3>
-                <p>1<input type="checkbox"/></p>
-                <p>2<input type="checkbox"/></p>
-                <p>3<input type="checkbox"/></p>
-                <p>4<input type="checkbox"/></p>
-                <p>5<input type="checkbox"/></p>
-                <p>6<input type="checkbox"/></p>
-                <p>7<input type="checkbox"/></p>
-                <p>8<input type="checkbox"/></p>
-                <p>9<input type="checkbox"/></p>
-            </div>
+            <div id="checkboxes"></div>
+            <button id="clear-button">Clear</button>
         </div>
     </div>
 </body>
